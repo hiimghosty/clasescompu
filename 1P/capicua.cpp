@@ -11,6 +11,7 @@ int cantDig(int c){  //dtermina cantidad digitos
         c=c/10;
     } return cont;
 }
+
 //holaaaa
 int mostrarA(int numero){
  //devuelve el numeros de derecha a izquierda
