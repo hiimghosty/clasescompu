@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//PRueba 2
 int validarDia(){
 	int dia;
 	do{
