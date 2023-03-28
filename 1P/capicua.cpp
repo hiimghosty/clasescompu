@@ -1,6 +1,5 @@
 //determine e imprima los 50 primeros numeros capicuas consecutivos mayores que 1000
-
-#include <iostream>
+//prueba nueva pc
 #include <math.h>
 using namespace std;
 
