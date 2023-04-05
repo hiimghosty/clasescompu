@@ -9,7 +9,7 @@ int cargaDeVector(){
 int main(){
     int vector[9];
     for(int i=0; i<9; i++){
-        vector[i]=cargaDeVector;
+        vector[i]=cargaDeVector();
         cout<<vector[i];
     }
 
