@@ -2,9 +2,9 @@
 #include<math.h>
 using namespace std;
 /* 
-Lea un número entero y positivo N y otro entero y positivo de un dígito P 
+Lea un nï¿½mero entero y positivo N y otro entero y positivo de un dï¿½gito P 
 (validarambos) 
-del número entero N eliminar la posición del dígito indicado por P 
+del nï¿½mero entero N eliminar la posiciï¿½n del dï¿½gito indicado por P 
 (Ejemplo:
 N = 52647; P = 2; resultado 5267).*/
 int validarN(){
