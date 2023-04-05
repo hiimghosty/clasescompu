@@ -12,6 +12,7 @@ void impresionDeVector(int vector[]){
         cout<<vector[i]<<" ";
     }
 }
+
 int main(){
     int vector[9];
     for(int i=0; i<9; i++){
