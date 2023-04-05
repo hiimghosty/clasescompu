@@ -2,10 +2,10 @@
 using namespace std;
 int main(){
 	/*
-	Escribir un programa que lea tres números enteros, y muestre en pantalla el valor central. 
-	Por ejemplo, si los números ingresados son 4, 1 y 3 (en cualquier orden), debe mostrarse en pantalla el 3.
+	Escribir un programa que lea tres nï¿½meros enteros, y muestre en pantalla el valor central. 
+	Por ejemplo, si los nï¿½meros ingresados son 4, 1 y 3 (en cualquier orden), debe mostrarse en pantalla el 3.
 
-Obs: se puede suponer que siempre se cargarán números enteros 
+Obs: se puede suponer que siempre se cargarï¿½n nï¿½meros enteros 
 	*/
 	int a,b,c,central;
 	cout<<"Introducir 3 numeros"<<endl;
