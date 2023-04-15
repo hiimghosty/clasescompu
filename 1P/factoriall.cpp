@@ -6,7 +6,8 @@ int main(){
     /* Asegurándose de que el número ingresado sea un número natural,
      calcular el factorial de dicho
 número*/
-    int resultado=1;
+
+    double resultado=1; //Usamos double porque tendremos numeros muy grandes
     float n;
     do{
         cout << "Introducir un numero entero y positivo: ";
