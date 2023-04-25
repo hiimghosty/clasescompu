@@ -35,10 +35,12 @@ int main(){
     //Pedir al usuario que ingrese un vector con N elementos, e imprimir el mayor elemento
     //y el menor
     int n;
-    int numeros[n];
-
+    
     cout << "Introducir un tamanho entero de n"<<endl;
     cin >> n;
+
+    int numeros[n];
+
 
     for (int i=0; i<n; i++){
         cout<<"Introducir el elemento numero : "<<i+1<<endl;
