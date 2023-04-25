@@ -7,8 +7,6 @@ int cargaDeVector(){
     return x;
 }
 
-
-
 void mayorElemento(int numeros[], int n){
     int mayor=numeros[0];
 
@@ -35,7 +33,7 @@ int main(){
     //Pedir al usuario que ingrese un vector con N elementos, e imprimir el mayor elemento
     //y el menor
     int n;
-    
+
     cout << "Introducir un tamanho entero de n"<<endl;
     cin >> n;
 
