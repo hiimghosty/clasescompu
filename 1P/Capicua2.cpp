@@ -1,8 +1,7 @@
-//determine e imprima los 50 primeros numeros capicuas consecutivos mayores que 1000
-
-#include <iostream>
-#include <math.h>
+#include<iostream>
+#include<math.h>
 using namespace std;
+//Imprime los primeros 50 numeros capicua (49 lgm)
 int cantDig(int c){  //dtermina cantidad digitos
     int cont=0;
     while(c>0){
@@ -20,13 +19,20 @@ int mostrarA(int numero){
 		digito=numero%10;
 		numInvertido=numInvertido+digito*pow(10,(numDigitos-1));
 		numDigitos--;
-
 		numero=numero/10;
 	}
 	return numInvertido;
 }
 int main(){
-	mostrarA(1243);
-	
+	int i=1000;
+	int numerosImpresos=1;
+	do{
+		if(i==mostrarA(i)){
+			cout<<numerosImpresos<<": "<<i<<endl;
+			numerosImpresos++;
+		}
+		i++;
+	} while(numerosImpresos<50);
+	cin>>i;
 	return 0;
 }

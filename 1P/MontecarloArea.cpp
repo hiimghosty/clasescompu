@@ -25,22 +25,16 @@ float ordenadaPotencia(float x){
 }
 int main(){
 	srand(time(NULL));
-	float x; 
-	float y; 
+	float x,y,areaDelCuadrado=pow(1,2),areaDeCurvas,puntosGenerados=0,puntosEnElArea; 
 	int n;
-	cout<<"Introducir n";
+	cout<<"Introducir N"<<endl;
 	cin>>n;
-	float areaDelCuadrado=pow(1,2);
-	float areaDeCurvas;
-	float puntosGenerados=0;
-	float puntosEnElArea=0;
 	while(puntosGenerados<n){
 		x=coordenadaAleatoria(); 
 		y=coordenadaAleatoria(); 
 		if((y<=ordenadaRaiz(x))and y>=ordenadaPotencia(x)){//Esto nos sirve para ver si nuestro punto esta entre las curvas
 			puntosEnElArea++; //Si es que esta, sumamos 1 a este contador
 		}
-
 		puntosGenerados++;//Este o no, sumamos 1 a este contador
 	}
 

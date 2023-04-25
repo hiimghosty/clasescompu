@@ -1,4 +1,5 @@
 #include<iostream>
+#include <math.h>
 using namespace std;
 float suma(float a, float b){
 	float resultado;

@@ -11,7 +11,12 @@ int validar(){
 	return n;
 }
 bool esPrimo(int n){
-	f
+	//cierto caso, return true
+	//cierto otro caso, return false
+	for(int i=2; i<n; i++){
+		if(n%i==0) return false;
+	}
+	return true;
 }
 int main(){
 	int n;
