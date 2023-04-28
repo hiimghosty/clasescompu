@@ -1,21 +1,25 @@
-#include<iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
-float suma(float a, float b){
+
+float suma(float a, float b)
+{
 	float resultado;
-	resultado=a+b;
+	resultado = a + b;
 	return resultado;
 }
-int main(){
+
+int main()
+{
 	cout << "Ingresar x";
 	float x;
-	cin>>x;
+	cin >> x;
 	cout << "Ingresar y";
 	float y;
-	cin>>y;
+	cin >> y;
 	float respuesta;
-	respuesta=suma(x,y);
-	cout << suma(x,y);
-	x=sqrt(100);
+	respuesta = suma(x, y);
+	cout << suma(x, y);
+	x = sqrt(100);
 	return 0;
 }
