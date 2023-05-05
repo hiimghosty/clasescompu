@@ -99,6 +99,6 @@ int main()
     cout << endl;
     promedio(notas, n);
     cout << endl;
-    segundaPeorNota(notas,n);
+    segundaPeorNota(notas, n);
     return 0;
 }
