@@ -13,7 +13,7 @@ int enterosAleatorios()
 
 void impresionDeVector(int vector[], int tam)
 {
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < tam; i++)
     {
         cout << vector[i] << " ";
     }
@@ -58,6 +58,7 @@ int main()
     */
 
     int alumnos[20];
+    int tam = 20
     float promedio = 0;
 
     for (int i = 0; i < 20; i++)
@@ -72,7 +73,7 @@ int main()
     promedio = calculoDePromedio(alumnos, 20);
     cout << endl;
     cout << "El promedio es: " << promedio;
-    inferiorAlPromedio(alumnos, 20, promedio);
+    inferiorAlPromedio(alumnos, tam, promedio);
 
     return 0;
 }
