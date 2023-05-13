@@ -50,11 +50,6 @@ void quicksort(int A[], int extremoIzquierdo, int extremoDerecho)
 int main()
 {
     int A[] = {7, -2, 4, 1, 6, 5, 0, -4, 2};
-    /*Tam simplemente representa la cantidad de elementos del vector,
-    normalmente es ingresado por el usuario, pero si nosotros mismos ya
-    pre cargamos el vector(Como ahora, que cargamos en el main),
-    podemos contar manualmente la cantidad de elementos
-    o en su defecto, hacer lo que yo hice abajo*/
     int tam = sizeof(A) / sizeof(A[0]);
     cout << "El vector sin ordenar es: " << endl;
     impresionDeVector(A, tam);
