@@ -14,7 +14,7 @@ void quicksort(int A[], int extremoIzquierdo, int extremoDerecho)
     int i, j, x, aux;
     i = extremoIzquierdo;
     j = extremoDerecho;
-    x = A[(extremoIzquierdo + extremoDerecho) / 2];
+    x = A[(extremoIzquierdo + extremoDerecho) / 2]; //PIVOT
     do
     {
         while ((A[i] < x) and (j <= extremoDerecho))
@@ -47,6 +47,8 @@ void quicksort(int A[], int extremoIzquierdo, int extremoDerecho)
         quicksort(A, i, extremoDerecho);
     }
 }
+
+
 int main()
 {
     int A[] = {7, -2, 4, 1, 6, 5, 0, -4, 2};
