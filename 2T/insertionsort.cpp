@@ -10,6 +10,7 @@ void imprimirVector(int N[], int tam)
         cout << N[i] << " ";
     }
 }
+
 void insertionSort(int N[], int tam){
     for (int i = 1; i < tam; i++){
         int llave = N[i];
