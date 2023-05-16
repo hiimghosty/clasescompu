@@ -103,8 +103,7 @@ int main()
     for (int i = 0; i < m; i++)
     {
         for ()
-        
-    }
+        }
     cout << endl;
     // Imprimir la matriz ordenada seria
     for (int i = 0; i < m; i++)
@@ -118,4 +117,5 @@ int main()
         }
 
         return 0;
+    }
     }
