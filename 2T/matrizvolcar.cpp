@@ -131,7 +131,7 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            cout << A[i][j] << " "; // enteros entre 0 y 10
+            cout << A[i][j] << " "; 
         }
         cout << endl;
     }
