@@ -72,7 +72,7 @@ int main()
     cout << "El vector con la matriz volcada es:  " << endl;
     imprimirVector(B, x);
     // Ordenamos el vector con insertionsort
-    insertionSort(B, x);
+    insertionSort(B, x-1);
     int inicioFila = 0, finalFila = m - 1;
     int inicioColumna = 0, finalColumna = n - 1;
     contador = 0;
