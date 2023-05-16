@@ -95,7 +95,7 @@ int main()
     cout << endl
          << "El vector es " << endl;
     impresionDeVector(A, x);
-    quicksort(A, 0, x);
+    quicksort(A, 0, x-1);
     cout << endl
          << "El vector ordenado es: " << endl;
     impresionDeVector(A, x);
