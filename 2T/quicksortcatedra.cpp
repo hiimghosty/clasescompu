@@ -55,7 +55,7 @@ int main()
                                         el vector en el main*/
     cout << "El vector sin ordenar es: " << endl;
     impresionDeVector(A, tam);
-    quicksort(A, 0, tam);
+    quicksort(A, 0, tam-1);
     cout << "El vector ordenado es: " << endl;
     impresionDeVector(A, tam);
 
