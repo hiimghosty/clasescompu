@@ -97,7 +97,7 @@ int main()
          << "La matriz volcada en el vector es: " << endl;
     impresionDeVector(B, x);
     cout << endl;
-    quicksort(B, 0, x);
+    quicksort(B, 0, x-1);
     cout << "El vector ordenado es: " << endl;
     impresionDeVector(B, x);
     // Cargo la matriz de vuelta
