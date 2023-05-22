@@ -11,6 +11,7 @@ void cargaDeMatriz(int *A, int m, int n)
         }
     }
 }
+
 int main()
 {
     int m, n;
