@@ -14,8 +14,6 @@ struct miembros
     unsigned int anho;
 };
 
-
-
 void cargaDeMiembros(miembros m[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -32,7 +30,17 @@ void cargaDeMiembros(miembros m[], int n)
 
 void hombreMasAntiguo(miembros m[], int n)
 {
+    int posPrimerHombre;
+    for (int i = 0; i < n; i++)
+    {
+        if (m[i].sexo == 'H')
+        {
+            posPrimerHombre = i;
+            break;
+        }
+    }
 
+    cout << "El primer hombre esta en la posicion" << posPrimerHombre;
 }
 
 int main()
@@ -43,6 +51,6 @@ int main()
     miembros club[n];
     cargaDeMiembros(club, n);
     hombreMasAntiguo(club, n);
-    //mujerMasAntigua(club, n);
+    // mujerMasAntigua(club, n);
     return 0;
 }
