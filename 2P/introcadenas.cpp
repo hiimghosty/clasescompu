@@ -27,6 +27,6 @@ int main()
     cin.getline(nombrecompleto,20,'\n');
     cout << "Tu nombre completo es: ";
     cout << nombrecompleto;
-
+    
     return 0;
 }

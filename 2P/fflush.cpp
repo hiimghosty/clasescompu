@@ -11,7 +11,7 @@ int main()
     cin >> nombre;
     cout << "Introducir nombre completo" << endl;
     fflush(stdin); //Borrar o agregar esta linea de codigo para probar que pasa
-    cin.getline(cad2, 100);
+    cin.getline(cad2, 100,'\n');
     cout << "La cadena 1 es " << nombre << endl;
     cout << "La cadena 2 es " << cad2 << endl;
 

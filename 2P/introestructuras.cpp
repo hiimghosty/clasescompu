@@ -8,6 +8,7 @@ struct Autos
     unsigned int anho;
 };
 
+
 void imprimirAutos(Autos a[], int m)
 {
     cout << "Los autos que tengo disponible son: " << endl;
