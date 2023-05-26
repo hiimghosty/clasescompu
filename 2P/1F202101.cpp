@@ -23,6 +23,17 @@ struct Tirador
     int disparos[6];
 };
 
+int mostrarMenu()
+{
+    cout << "--.-- Disparos al blanco --.--" << endl;
+    cout << "1. Leer datos de Tirador" << endl;
+    cout << "2. Salir" << endl;
+    cout << "Ingrese la Opcion->";
+    int N;
+    cin >> N;
+    return N;
+}
+
 void leerNombreyApellido(Tirador t)
 { /*Lee nombre completo del usuario, usamos fflush porque si no, rip*/
     /*Bueno, usamos fflush porque usamos un cin anteriormente(En el main)*/
@@ -34,7 +45,7 @@ void leerNombreyApellido(Tirador t)
 int nroAleatorio()
 {
     /*Genera numeros aleatorios entre -10 y 10*/
-    int x = (-10 + rand() % (10 + 10 + 1)); //cstdlib requerido
+    int x = (-10 + rand() % (10 + 10 + 1)); // cstdlib requerido
     return x;
 }
 
@@ -77,7 +88,7 @@ int hallarPosMejor(Puntaje p[])
     return PosMejor;
 }
 void imprimirTODO(Tirador t, int cantD, Puntaje p)
-{   //Imprimimos todo lo que nos pide el enunciado
+{ // Imprimimos todo lo que nos pide el enunciado
     cout << "Disparos:" << endl;
     for (int i = 0; i < (cantD * 2); i++)
     {
@@ -101,10 +112,10 @@ void calculoDePuntajes(Puntaje p[], Punto punto[], int cantD)
     int R = 0;
     for (int i = 0; i < cantD; i++)
     {
-        R = sqrt(pow(punto[i].a, 2) + pow(punto[i].b, 2));//math.h requerido
+        R = sqrt(pow(punto[i].a, 2) + pow(punto[i].b, 2)); // math.h requerido
         if (R >= 0 and R < 2)
         {
-            strcpy(p[i].denominacion, "CENTRO"); //cstring requerido para usar strcpy
+            strcpy(p[i].denominacion, "CENTRO"); // cstring requerido para usar strcpy
             p[i].puntaje = 10;
         }
 
@@ -136,14 +147,12 @@ void calculoDePuntajes(Puntaje p[], Punto punto[], int cantD)
 
 int main()
 {
-    srand(time(NULL)); //ctime requerido
+    srand(time(NULL)); // ctime requerido
     int opc = 0;
     // srand(time(NULL));
     while (opc != 2)
     {
-        cout << "--.-- Disparos al Blanco --.--" << endl;
-        cout << "1.Leer datos de Tirador" << endl;
-        cout << "2.Salir" << endl;
+        opc = mostrarMenu();
         cin >> opc;
         if (opc == 1)
         {
