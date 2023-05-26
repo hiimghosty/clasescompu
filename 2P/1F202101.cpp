@@ -153,7 +153,6 @@ int main()
     while (opc != 2)
     {
         opc = mostrarMenu();
-        cin >> opc;
         if (opc == 1)
         {
 
