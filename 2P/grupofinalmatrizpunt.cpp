@@ -91,6 +91,7 @@ int main()
     int *pt = &A[0][0];
     cargaDeMatriz(pt, N, N);
     imprimirMatriz(pt, N, N);
+    cout << endl;
 
     int tam = N / 2 * N / 2;
     int Q2[tam];

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+// Matriz ordenada por cuadrantes pero con punteros
 using namespace std;
 
 int validarN()
@@ -58,6 +59,7 @@ void ordenarBurbuja(int A[], int tam)
         }
     }
 }
+
 void imprimirVector(int A[], int N)
 {
     for (int i = 0; i < N; i++)
@@ -65,6 +67,21 @@ void imprimirVector(int A[], int N)
         cout << A[i] << " ";
     }
 }
+
+void Cuadrante2(int *pt, int Q2[], int N)
+{
+
+    int contador = 0;
+    int limite = ((N / 2) * N + (N / 2));
+    for (int i = 0; i < limite; i++)
+    {
+        Q2[contador] = *(pt + i);
+        contador++;
+        if ((i + 1) % (N / 2) == 0)
+            i += N / 2;
+    }
+}
+
 int main()
 {
     srand(time(NULL));
@@ -74,35 +91,12 @@ int main()
     int *pt = &A[0][0];
     cargaDeMatriz(pt, N, N);
     imprimirMatriz(pt, N, N);
+    cout << endl;
 
     int tam = N / 2 * N / 2;
     int Q2[tam];
-    // Vuelvo el segundo cuadrante en el vector
-    int contadorQ2 = 0;
-    for (int i = 0; i < N / 2; i++)
-    {
-        for (int j = 0; j < N / 2; j++)
-        {
-            Q2[contadorQ2] = A[i][j];
-            contadorQ2++;
-        }
-    }
-
-    ordenarBurbuja(Q2, tam);
-    cout << "El Q2 ordenado es: " << endl;
-    imprimirVector(Q2, tam);
-    // Cargo el vector ordenado en la matriz
-    contadorQ2 = 0;
-    for (int i = 0; i < N / 2; i++)
-    {
-        for (int j = 0; j < N / 2; j++)
-        {
-            A[i][j] = Q2[contadorQ2];
-            contadorQ2++;
-        }
-    }
-    cout << "La matriz con el segundo cuadrante ordenado es:"<<endl;
-    imprimirMatriz(pt,N,N);
-
+    Cuadrante2(pt, Q2, N);
+    cout << "El vector Q2 es"<<endl;
+    imprimirVector(Q2,tam);
     return 0;
 }
