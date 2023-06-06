@@ -53,6 +53,7 @@ int main()
     int A[] = {7, -2, 4, 1, 6, 5, 0, -4, 2};
     int tam = sizeof(A) / sizeof(A[0]); /* Usamos si no queremos contar,y declaramos
                                         el vector en el main*/
+
     cout << "El vector sin ordenar es: " << endl;
     impresionDeVector(A, tam);
     quicksort(A, 0, tam-1);
