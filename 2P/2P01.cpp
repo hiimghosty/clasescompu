@@ -46,7 +46,7 @@ void imprimirVector(int A[], int N) {
 }
 
 void contarDigitos(int arr[], int tam) {
-    int frecuencia[10] = {0};
+    int frecuencia[10];
 
     for (int i = 0; i < tam; i++) {
         int numero = arr[i];
