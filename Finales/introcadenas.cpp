@@ -25,8 +25,8 @@ int main()
     char nombrecompleto[20];
     cout << "Introducir nombre completo";
     cin.getline(nombrecompleto,20,'\n');
+
     cout << "Tu nombre completo es: ";
     cout << nombrecompleto;
-    
     return 0;
 }
