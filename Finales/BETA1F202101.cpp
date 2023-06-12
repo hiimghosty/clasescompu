@@ -123,6 +123,17 @@ int hallarPosMejor(Puntaje p[])
     }
     return PosMejor;
 }
+
+int mostrarMenu()
+{
+    int opcion;
+    cout << "--.-- Disparos al blanco --.-- " << endl;
+    cout << "1. Leer datos de Tirador" << endl;
+    cout << "2.Salir" << endl;
+    cout << "Selecione la opcion -> ";
+    cin >> opcion;
+    return opcion;
+}
 int main()
 {
     // Primero desplegamos el menu
