@@ -15,7 +15,6 @@ int main()
 {
     char cad1[5] = {'h', 'o', 'l', 'a', '\0'}; // Caracter terminador
     char cad2[5] = "hola";                     // en todas las cadenas esta el caracter terminador
-
     cout << "La cadena 1 es: ";
     cout << cad1 << endl;
     cout << "La cadena 2 es: ";
@@ -24,9 +23,11 @@ int main()
     char nombre[20];
     char nombrecompleto[20];
     cout << "Introducir nombre completo";
-    cin.getline(nombrecompleto,20,'\n');
+    cin.getline(nombrecompleto, 20, '\n');
 
     cout << "Tu nombre completo es: ";
     cout << nombrecompleto;
+
+    cout << "Tu nombre tiene " << strlen(nombrecompleto) << "caracteres";
     return 0;
 }
