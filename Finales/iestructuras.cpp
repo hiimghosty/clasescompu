@@ -28,6 +28,17 @@ int main()
     int m;
     cout << "Introducir cuantos autos tienes" << endl;
     cin >> m;
-    cout << "Introducir la marca" <<endl;
+    Autos a[m];
+
+    for (int i = 0; i < m; i++)
+    {
+        cout << "Introducir la marca" << endl;
+        cin >> a[i].marca;
+        cout << "Introducir modelo" << endl;
+        cin >> a[i].modelo;
+        cout << "introducir anho" << endl;
+        cin >> a[i].anho;
+    }
+    imprimirAutos(a,m);
     return 0;
 }

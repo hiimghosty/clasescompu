@@ -7,7 +7,7 @@ struct
     char nombre[20];
     int semestre;
 
-} alumno1; // Nombre de la estructura
+} alumno1,alumno2,alumno3; // Nombre de la estructura
 
 int main()
 {

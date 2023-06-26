@@ -8,9 +8,10 @@ int main()
     usa*/
     char nombre[100], nombreCompleto[100];
     cout << "Intorducir nombre" << endl;
-    cin >> nombre;
+    cin.getline(nombre, 100, '\n');
+
     cout << "Introducir nombre completo" << endl;
-    fflush(stdin); // Borrar o agregar esta linea de codigo para probar que pasa
+    //fflush(stdin); // Borrar o agregar esta linea de codigo para probar que pasa
     cin.getline(nombreCompleto, 100, '\n');
     cout << "La cadena 1 es " << nombre << endl;
     cout << "La cadena 2 es " << nombreCompleto << endl;
