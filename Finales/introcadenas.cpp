@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <cstring> //Libreria para varias funciones con cadenas
 /*
 strlen(cad1); -----> devuelve la cantidad de caracteres de la cad1 sin contar '\0'
@@ -15,19 +16,18 @@ int main()
 {
     char cad1[5] = {'h', 'o', 'l', 'a', '\0'}; // Caracter terminador
     char cad2[5] = "hola";                     // en todas las cadenas esta el caracter terminador
-    cout << "La cadena 1 es: ";
-    cout << cad1 << endl;
-    cout << "La cadena 2 es: ";
-    cout << cad2 << endl;
 
     char nombre[20];
-    char nombrecompleto[20];
-    cout << "Introducir nombre completo";
-    cin.getline(nombrecompleto, 20, '\n');
+    cout << "Introducir tu nombre: ";
+    cin >> nombre;
+    // Problema 1, el espacio termina mi cadena
+    // Problema 2, es que aunque me pase de caracteres, igual se guarda ese exceso de caracteres
 
-    cout << "Tu nombre completo es: ";
-    cout << nombrecompleto;
-
-    cout << "Tu nombre tiene " << strlen(nombrecompleto) << "caracteres";
+    cout << endl<< nombre;
+    cout << "Introducir tu nombre completo: ";
+    char nombreCompleto[20];
+    fflush(stdin); 
+    cin.getline(nombreCompleto,20,'\n');
+    cout << nombreCompleto;
     return 0;
 }
