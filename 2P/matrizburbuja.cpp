@@ -17,6 +17,22 @@ void ordenamientoBurbuja(int *pt, int tam)
     }
 }
 
+
+void ordenarBurbuja(int A[], int tam)
+{
+    for (int i = 0; i < (tam - 1); i++)
+    {
+        for (int j = 0; j < (tam - 1); j++)
+        {
+            if (A[j] > A[j + 1])
+            {
+                int aux = A[j];
+                A[j] = A[j + 1];
+                A[j + 1] = aux;
+            }
+        }
+    }
+}
 void imprimirMatriz(int *p, int m, int n)
 {
     int cantElementos = m * n;
@@ -39,8 +55,11 @@ void cargaDeMatriz(int *x, int m, int n)
         cin >> *(x + i);
     }
 }
+
+
 int main()
 {
+    cout << "Introducir filas y columnas" << endl;
     int m, n;
     cin >> m;
     cin >> n;
