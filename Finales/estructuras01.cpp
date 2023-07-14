@@ -10,12 +10,8 @@ struct
 
 int main()
 {
-    cout << "Introducir cedula";
     cin>>Datos.cedula;
-    cout <<"Introducir nombre";
     cin>>Datos.nombre;
-
-    cout <<Datos.cedula;
-    cout <<Datos.nombre;
     return 0;
 }
+

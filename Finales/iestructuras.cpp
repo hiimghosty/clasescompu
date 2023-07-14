@@ -1,44 +1,46 @@
 #include <iostream>
-
 using namespace std;
 
 struct Autos
 {
     char modelo[20];
     char marca[20];
-    unsigned int anho;
+    int anho;
 };
 
-void imprimirAutos(Autos a[], int n)
+void imprimirAutos(Autos a[], int m)
 {
-    for (int i = 0; i < n; i++)
+    cout << "Los autos que tengo disponible son: " << endl;
+    for (int i = 0; i < m; i++)
     {
-        cout << "Datos del auto nro " << (i + 1) << endl;
-        cout << "modelo:" << endl;
+        cout << "Mostrando los datos del auto nro " << i + 1 << endl;
+        cout << "modelo:";
         cout << a[i].modelo << endl;
-        cout << "marca:" << endl;
+        cout << "marca:";
         cout << a[i].marca << endl;
-        cout << "anho" << endl;
+        cout << "anho:";
         cout << a[i].anho << endl;
     }
 }
 
 int main()
 {
-    int m;
-    cout << "Introducir cuantos autos tienes" << endl;
-    cin >> m;
-    Autos a[m];
-
-    for (int i = 0; i < m; i++)
+    Autos a[5];
+    //Se puede tambien hacer en funciones
+    for (int i = 0; i < 5; i++)
     {
+        cout << "Introducir el modelo" << endl;
+        fflush(stdin);
+        cin.getline(a[i].modelo, 20, '\n');
         cout << "Introducir la marca" << endl;
-        cin >> a[i].marca;
-        cout << "Introducir modelo" << endl;
-        cin >> a[i].modelo;
-        cout << "introducir anho" << endl;
+        fflush(stdin);
+        cin.getline(a[i].marca, 20, '\n');
+        cout << "Introducir el anho" << endl;
         cin >> a[i].anho;
+        cout << endl;
     }
-    imprimirAutos(a,m);
+
+    imprimirAutos(a,5);
+
     return 0;
 }
