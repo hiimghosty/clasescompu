@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <cstring>
 using namespace std;
-
+//FALTA TERMINARR
 void cargarAsteriscos(char asteriscos[],int cantAsteriscos)
 {
     for (int i = 0; i < cantAsteriscos; i++)
