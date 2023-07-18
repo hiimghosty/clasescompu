@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstring>
+#include <cstdlib>
 using namespace std;
 
 struct DateTime
@@ -11,7 +13,7 @@ struct DateTime
     int segundo;
 };
 
-bool esAnioBisiesto(int anho)
+bool esanhoBisiesto(int anho)
 {
 
     if (anho % 4 == 0)
@@ -46,7 +48,7 @@ int obtenerDiasEnMes(int mes, int anho)
      diciembre 31 días.*/
     if (mes == 2)
     {
-        if (esAnioBisiesto(anho))
+        if (esanhoBisiesto(anho))
             return 29;
         else
             return 28;
@@ -57,11 +59,89 @@ int obtenerDiasEnMes(int mes, int anho)
         return 30;
 }
 
-void convertirTimeStamp(float timestamp, DateTime *fecha)
+void convertirTimeStamp(long long timestamp, DateTime *fh)
 {
-    float cantDias = timestamp / 86400;
-    cout << "Tenemos " << cantDias << " dias" << endl;
-    (*fecha).hora;
+    int SEGUNDOS_POR_MINUTO = 60;
+    int MINUTOS_POR_HORA = 60;
+    int HORAS_POR_DIA = 24;
+    int MESES_POR_anho = 12;
+    long long SEGUNDOS_POR_anho = (long long)SEGUNDOS_POR_MINUTO * MINUTOS_POR_HORA * HORAS_POR_DIA * 365;
+    int anho_INICIAL = 1970;
+
+    long long totalSegundos = timestamp;
+
+    (*fh).anho = anho_INICIAL;
+    // (*fh).anho;
+    while (totalSegundos >= SEGUNDOS_POR_anho + esanhoBisiesto((*fh).anho) * 86400)
+    {
+        totalSegundos -= (SEGUNDOS_POR_anho + esanhoBisiesto((*fh).anho) * 86400);
+        (*fh).anho++;
+    }
+
+    (*fh).mes = 1;
+    while (totalSegundos >= obtenerDiasEnMes((*fh).mes, (*fh).anho) * 86400)
+    {
+        totalSegundos -= (obtenerDiasEnMes((*fh).mes, (*fh).anho) * 86400);
+        (*fh).mes++;
+    }
+
+    (*fh).dia = 1;
+    while (totalSegundos >= 86400)
+    {
+        totalSegundos -= 86400;
+        (*fh).dia++;
+    }
+
+    (*fh).hora = totalSegundos / (SEGUNDOS_POR_MINUTO * MINUTOS_POR_HORA);
+    totalSegundos %= (SEGUNDOS_POR_MINUTO * MINUTOS_POR_HORA);
+
+    (*fh).minuto = totalSegundos / SEGUNDOS_POR_MINUTO;
+    (*fh).segundo = totalSegundos % SEGUNDOS_POR_MINUTO;
+}
+
+void formatearFechaHora(DateTime fh, char cadena[])
+{
+
+    /*strcpy(cad1,cad2); -----> copia la cad2 en la cad1
+
+    strcat(cad1,cad2); -----> concatena las cadenas cad1 y cad2 (el resultado queda en cad1)*/
+    // AAAA-MM-DD HH:MM:SS
+    char anho[5];
+    itoa(fh.anho, anho, 10);
+    char mes[3];
+    itoa(fh.mes, mes, 10);
+    char dia[3];
+    itoa(fh.dia, dia, 10);
+    char hora[3];
+    itoa(fh.hora, hora, 10);
+    char minuto[3];
+    itoa(fh.minuto, minuto, 10);
+    char segundo[3];
+    itoa(fh.segundo, segundo, 10);
+
+    strcpy(cadena, anho);
+    strcat(cadena, "-");
+    if (fh.mes < 10)
+        strcat(cadena, "0");
+    strcat(cadena, mes);
+    strcat(cadena, "-");
+    if (fh.dia < 10)
+        strcat(cadena, "0");
+    strcat(cadena, dia);
+    strcat(cadena, " ");
+    if (fh.hora < 10)
+        strcat(cadena, "0");
+    strcat(cadena, hora);
+    strcat(cadena, ":");
+    if (fh.minuto < 10)
+        strcat(cadena, "0");
+    strcat(cadena, minuto);
+    strcat(cadena, ":");
+    if (fh.segundo < 10)
+        strcat(cadena, "0");
+    strcat(cadena, segundo);
+    cout << "Fecha y hora UTC: ";
+    cout << cadena;
 }
 
 int main()
@@ -77,5 +157,7 @@ int main()
     long long timestamp;
     cin >> timestamp;
     convertirTimeStamp(timestamp, &fecha);
+    char cadena[100];
+    formatearFechaHora(fecha, cadena);
     return 0;
 }
